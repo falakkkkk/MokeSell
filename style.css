@@ -1,0 +1,333 @@
+body {
+    font-family: Arial, sans-serif; /* You can keep this for general text */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* NAVBAR */
+.navbar {
+    display: grid;
+    /* 3 columns: 
+       1) Left (hamburger + Sell), 
+       2) Center (Moke Sell), 
+       3) Right (icons) */
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Left side */
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .sell-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Center Title: Moke Sell in Carattere */
+  .logo {
+    font-family: 'Carattere', cursive;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  /* Right side (wishlist, cart, search, notification, chat, profile) */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* The rest of your existing CSS is unchanged */
+  
+
+/* The rest of your existing code remains the same */
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #ddd;
+    height: 300px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    text-align: center;
+    line-height: 300px;
+    background-color: #bbb;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.categories, .favorites, .top-picks, .main-products {
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px 0;
+}
+
+.category-list {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.category {
+    background-color: #eee;
+    width: 180px;
+    height: 250px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+}
+
+.product-list, .product-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #eee;
+    padding: 20px;
+    flex: 1 1 calc(25% - 30px);
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Favorites, Top Picks, & View More sections are unchanged */
+.favorites-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.favorites-prev,
+.favorites-next {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    color: #555;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    padding: 0.5rem;
+}
+.favorites-prev:hover,
+.favorites-next:hover {
+    color: #000;
+}
+.favorites-prev {
+    left: 0;
+}
+.favorites-next {
+    right: 0;
+}
+.favorites-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.favorite-item {
+    position: absolute;
+    width: 180px;
+    height: 240px;
+    background-color: #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s, z-index 0.3s;
+}
+
+.top-picks-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.top-picks-prev,
+.top-picks-next {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    color: #555;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    padding: 0.5rem;
+}
+.top-picks-prev:hover,
+.top-picks-next:hover {
+    color: #000;
+}
+.top-picks-prev {
+    left: 0;
+}
+.top-picks-next {
+    right: 0;
+}
+.top-picks-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-picks-item {
+    position: absolute;
+    width: 180px;
+    height: 240px;
+    background-color: #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s, z-index 0.3s;
+}
+
+/* View More (3 rows of 3 portrait boxes) */
+.view-more {
+  padding: 20px;
+  background-color: #fff;
+  margin: 10px 0;
+}
+.view-more-title {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 50px;
+}
+.portrait-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.portrait-box {
+  position: relative;
+  width: 220px; 
+  height: 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+}
+.heart-circle {
+  position: absolute;
+  top: -10px; 
+  right: -10px; 
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.heart {
+  color: #e74c3c;
+  font-size: 1.2rem;
+}
+.portrait-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 155px;
+}
+.portrait-description {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+.portrait-price {
+  margin: 0 0 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+.portrait-stars {
+  color: #FFD700; /* gold stars */
+  margin: 0;
+}

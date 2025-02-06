@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Website</title>
+  <!-- Carattere font for the Moke Sell title -->
+  <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <!-- Left Section: hamburger + Sell button -->
+      <div class="navbar-left">
+        <div class="hamburger">&#9776;</div>
+        <button class="sell-button">Sell</button>
+      </div>
+      
+      <!-- Center: "Moke Sell" in Carattere font -->
+      <div class="logo">Moke Sell</div>
+      
+      <!-- Right Section: wishlist, cart, search, notification, chat, profile -->
+      <div class="navbar-right icons">
+        <span class="wishlist">&#x2661;</span>
+        <span class="cart">&#x1F6D2;</span>
+        <span class="search">&#x1F50D;</span>
+        <span class="notification">&#128276;</span>
+        <span class="chat">&#9993;</span>
+        <span class="profile">&#128100;</span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="carousel">
+    <div class="carousel-container">
+      <div class="carousel-slide">Slide 1</div>
+      <div class="carousel-slide">Slide 2</div>
+      <div class="carousel-slide">Slide 3</div>
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </section>
+
+  <section class="categories">
+    <h2>Browse Our Hottest Categories</h2>
+    <div class="category-list">
+      <div class="category">Category 1</div>
+      <div class="category">Category 2</div>
+      <div class="category">Category 3</div>
+      <div class="category">Category 4</div>
+    </div>
+  </section>
+
+  <!-- FAVORITES SECTION -->
+  <section class="favorites">
+    <h2>Favorites</h2>
+    <div class="favorites-slider">
+      <button class="favorites-prev">&#10094;</button>
+      <div class="favorites-container">
+        <div class="favorite-item">Product 1</div>
+        <div class="favorite-item">Product 2</div>
+        <div class="favorite-item">Product 3</div>
+        <div class="favorite-item">Product 4</div>
+        <div class="favorite-item">Product 5</div>
+        <div class="favorite-item">Product 6</div>
+        <div class="favorite-item">Product 7</div>
+        <div class="favorite-item">Product 8</div>
+        <div class="favorite-item">Product 9</div>
+        <div class="favorite-item">Product 10</div>
+      </div>
+      <button class="favorites-next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- TOP PICKS SECTION -->
+  <section class="top-picks">
+    <h2>Top Picks</h2>
+    <div class="top-picks-slider">
+      <button class="top-picks-prev">&#10094;</button>
+      <div class="top-picks-container">
+        <div class="top-picks-item">Pick 1</div>
+        <div class="top-picks-item">Pick 2</div>
+        <div class="top-picks-item">Pick 3</div>
+        <div class="top-picks-item">Pick 4</div>
+        <div class="top-picks-item">Pick 5</div>
+        <div class="top-picks-item">Pick 6</div>
+        <div class="top-picks-item">Pick 7</div>
+        <div class="top-picks-item">Pick 8</div>
+        <div class="top-picks-item">Pick 9</div>
+        <div class="top-picks-item">Pick 10</div>
+      </div>
+      <button class="top-picks-next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- VIEW MORE PRODUCTS -->
+  <section class="view-more">
+    <h2 class="view-more-title">View More Products</h2>
+
+    <!-- (3 rows of portrait boxes) -->
+    <div class="portrait-row">
+      <div class="portrait-box">
+        <div class="heart-circle">
+          <span class="heart">&#x2661;</span>
+        </div>
+        <img src="https://via.placeholder.com/200x200" alt="Product 1" class="portrait-img" />
+        <p class="portrait-description">Description for Product 1</p>
+        <p class="portrait-price">$29.99</p>
+        <p class="portrait-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      </div>
+      <div class="portrait-box">
+        <div class="heart-circle">
+          <span class="heart">&#x2661;</span>
+        </div>
+        <img src="https://via.placeholder.com/200x200" alt="Product 2" class="portrait-img" />
+        <p class="portrait-description">Description for Product 2</p>
+        <p class="portrait-price">$39.99</p>
+        <p class="portrait-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      </div>
+      <div class="portrait-box">
+        <div class="heart-circle">
+          <span class="heart">&#x2661;</span>
+        </div>
+        <img src="https://via.placeholder.com/200x200" alt="Product 3" class="portrait-img" />
+        <p class="portrait-description">Description for Product 3</p>
+        <p class="portrait-price">$49.99</p>
+        <p class="portrait-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      </div>
+    </div>
+
+    <div class="portrait-row">
+      <div class="portrait-box">
+        <div class="heart-circle">
+          <span class="heart">&#x2661;</span>
+        </div>
+        <img src="https://via.placeholder.com/200x200" alt="Product 4" class="portrait-img" />
+        <p class="portrait-description">Description for Product 4</p>
+        <p class="portrait-price">$59.99</p>
+        <p class="portrait-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      </div>
+      <div class="portrait-box">
+        <div class="heart-circle">
+          <span class="heart">&#x2661;</span>
+        </div>
+        <img src="https://via.placeholder.com/200x200" alt="Product 5" class="portrait-img" />
+        <p class="portrait-description">Description for Product 5</p>
+        <p class="portrait-price">$69.99</p>
+        <p class="portrait-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      </div>
+      <div class="portrait-box">
+        <div class="heart-circle">
+          <span class="heart">&#x2661;</span>
+        </div>
+        <img src="https://via.placeholder.com/200x200" alt="Product 6" class="portrait-img" />
+        <p class="portrait-description">Description for Product 6</p>
+        <p class="portrait-price">$79.99</p>
+        <p class="portrait-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      </div>
+    </div>
+
+    <div class="portrait-row">
+      <div class="portrait-box">
+        <div class="heart-circle">
+          <span class="heart">&#x2661;</span>
+        </div>
+        <img src="https://via.placeholder.com/200x200" alt="Product 7" class="portrait-img" />
+        <p class="portrait-description">Description for Product 7</p>
+        <p class="portrait-price">$89.99</p>
+        <p class="portrait-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      </div>
+      <div class="portrait-box">
+        <div class="heart-circle">
+          <span class="heart">&#x2661;</span>
+        </div>
+        <img src="https://via.placeholder.com/200x200" alt="Product 8" class="portrait-img" />
+        <p class="portrait-description">Description for Product 8</p>
+        <p class="portrait-price">$99.99</p>
+        <p class="portrait-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      </div>
+      <div class="portrait-box">
+        <div class="heart-circle">
+          <span class="heart">&#x2661;</span>
+        </div>
+        <img src="https://via.placeholder.com/200x200" alt="Product 9" class="portrait-img" />
+        <p class="portrait-description">Description for Product 9</p>
+        <p class="portrait-price">$109.99</p>
+        <p class="portrait-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Niche Sol. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
