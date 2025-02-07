@@ -4,34 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Website</title>
-  <!-- Carattere font for the Moke Sell title -->
+  <!-- Carattere font for "Moke Sell" -->
   <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <!-- Left Section: hamburger + Sell button -->
+      <!-- Left: hamburger + Sell -->
       <div class="navbar-left">
         <div class="hamburger">&#9776;</div>
         <button class="sell-button">Sell</button>
       </div>
       
-      <!-- Center: "Moke Sell" in Carattere font -->
+      <!-- Center: "Moke Sell" -->
       <div class="logo">Moke Sell</div>
       
-      <!-- Right Section: wishlist, cart, search, notification, chat, profile -->
+      <!-- Right side: custom icon images -->
       <div class="navbar-right icons">
-        <span class="wishlist">&#x2661;</span>
-        <span class="cart">&#x1F6D2;</span>
-        <span class="search">&#x1F50D;</span>
-        <span class="notification">&#128276;</span>
-        <span class="chat">&#9993;</span>
-        <span class="profile">&#128100;</span>
+        <span class="wishlist">
+          <img src="images/wishlist.png" alt="Wishlist" class="icon-img" />
+        </span>
+        <span class="cart">
+          <img src="images/cart.png" alt="Cart" class="icon-img" />
+        </span>
+        <span class="search">
+          <img src="images/search.png" alt="Search" class="icon-img" />
+        </span>
+        <span class="notification">
+          <img src="images/notification.png" alt="Notification" class="icon-img" />
+        </span>
+        <span class="chat">
+          <img src="images/chat.png" alt="Chat" class="icon-img" />
+        </span>
+        <span class="profile">
+          <img src="images/profile.png" alt="Profile" class="icon-img" />
+        </span>
       </div>
     </nav>
   </header>
 
+  <!-- CAROUSEL -->
   <section class="carousel">
     <div class="carousel-container">
       <div class="carousel-slide">Slide 1</div>
@@ -42,15 +55,41 @@
     <button class="next">&#10095;</button>
   </section>
 
-  <section class="categories">
-    <h2>Browse Our Hottest Categories</h2>
+  <!-- DISCOUNT OFFERS (3 in a row, single baseline, sliding line on hover) -->
+  <section class="discount-offers">
+    <div class="discount-item">
+      <img src="https://via.placeholder.com/60" alt="Offer Image">
+      <p>Free Shipping with a minimum spend of $50!</p>
+    </div>
+    <div class="discount-item">
+      <img src="https://via.placeholder.com/60" alt="Offer Image">
+      <p>Buy 1 Get 1 Free on Select Items!</p>
+    </div>
+    <div class="discount-item">
+      <img src="https://via.placeholder.com/60" alt="Offer Image">
+      <p>Extra 10% Off for New Customers!</p>
+    </div>
+    <!-- The moving "slider line" -->
+    <div class="slider-line"></div>
+  </section>
+  <hr class="discount-separator" />
+
+<!-- CATEGORIES (Added arrows) -->
+<section class="categories">
+  <h2>Browse Our Hottest Categories</h2>
+  <div class="categories-container">
+    <button class="cat-prev">&#10094;</button>
     <div class="category-list">
       <div class="category">Category 1</div>
       <div class="category">Category 2</div>
       <div class="category">Category 3</div>
       <div class="category">Category 4</div>
+      <div class="category">Category 5</div>
     </div>
-  </section>
+    <button class="cat-next">&#10095;</button>
+  </div>
+</section>
+  <!-- END CATEGORIES -->
 
   <!-- FAVORITES SECTION -->
   <section class="favorites">
@@ -94,11 +133,9 @@
     </div>
   </section>
 
-  <!-- VIEW MORE PRODUCTS -->
+  <!-- VIEW MORE PRODUCTS (3 rows) -->
   <section class="view-more">
     <h2 class="view-more-title">View More Products</h2>
-
-    <!-- (3 rows of portrait boxes) -->
     <div class="portrait-row">
       <div class="portrait-box">
         <div class="heart-circle">
@@ -191,7 +228,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Niche Sol. All rights reserved.</p>
+    <p>&copy; 2025 Moke Sell. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
