@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="edit_profile.css" />
+  </head>
+  <body>
+
+    <header class="top-nav">
+      <h1>My Dashboard</h1>
+    </header>
+
+    <div class="page-container">
+      <div class="sidebar">
+        <h2 class="sidebar-heading">User Profile</h2>
+        <ul class="nav">
+          <li class="nav-item active" data-tab="user-info">User Info</li>
+          <li class="nav-item" data-tab="leaderboard">LeaderBoard</li>
+          <li class="nav-item" data-tab="listing">Listing</li>
+          <li class="nav-item" data-tab="followers">Followers</li>
+          <li class="nav-item" data-tab="reviews">Reviews</li>
+          <li class="nav-item" data-tab="coins">Coins</li>
+          <li class="nav-item" data-tab="balance">Balance</li>
+          <li class="nav-item" data-tab="game">Game</li>
+        </ul>
+        <div class="logout">
+          <a href="#">Logout</a>
+        </div>
+        <div class="vertical-separator">
+          <div class="nav-indicator"></div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="profile-header">
+          <div class="profile-image">
+            <img src="avatar.jpg" alt="Profile Image" id="profileImage">
+            <button class="edit-btn" id="editBtn">Edit</button>
+            <input type="file" id="fileInput" accept="image/*" style="display:none;">
+          </div>
+          <div class="profile-info">
+            <h1 class="user-name">John Doe</h1>
+            <p class="user-country">Singapore</p>
+          </div>
+        </div>
+        <div class="update-form">
+          <div class="form-columns">
+            <div class="column">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" placeholder="First Name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Location">
+              </div>
+            </div>
+            <div class="column">
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" placeholder="Last Name">
+              </div>
+              <div class="form-group">
+                <label for="number">Number</label>
+                <input type="tel" id="number" placeholder="Number">
+              </div>
+              <div class="form-group">
+                <label for="postal-code">Postal Code</label>
+                <input type="text" id="postal-code" placeholder="Postal Code">
+              </div>
+            </div>
+          </div>
+          <div class="save-button-container">
+            <button class="save-btn">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="edit-profile.js"></script>
+  </body>
+</html>
