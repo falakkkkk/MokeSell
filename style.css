@@ -1,333 +1,386 @@
 body {
-    font-family: Arial, sans-serif; /* You can keep this for general text */
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+  font-family: Arial, sans-serif; /* You can keep this for general text */
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
 }
 
 /* NAVBAR */
 .navbar {
-    display: grid;
-    /* 3 columns: 
-       1) Left (hamburger + Sell), 
-       2) Center (Moke Sell), 
-       3) Right (icons) */
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  /* Left side */
-  .navbar-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .hamburger {
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #333;
-  }
-  
-  .sell-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 6px 12px;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* Center Title: Moke Sell in Carattere */
-  .logo {
-    font-family: 'Carattere', cursive;
-    font-size: 1.8rem;
-    text-align: center;
-  }
-  
-  /* Right side (wishlist, cart, search, notification, chat, profile) */
-  .navbar-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  /* The rest of your existing CSS is unchanged */
-  
+  display: grid;
+  /* 3 columns: (hamburger+Sell) | (Moke Sell) | (icons) */
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-/* The rest of your existing code remains the same */
+.navbar-left {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+.hamburger {
+font-size: 1.5rem;
+cursor: pointer;
+color: #333;
+}
+.sell-button {
+background-color: #333;
+color: #fff;
+border: none;
+padding: 6px 12px;
+font-size: 1rem;
+border-radius: 4px;
+cursor: pointer;
+}
 
+/* Center brand "Moke Sell" */
+.logo {
+font-family: 'Carattere', cursive;
+font-size: 1.8rem;
+margin-left: 350px; /* or remove if you want exact center via the grid */
+}
+
+/* Right side icons */
+.navbar-right {
+display: flex;
+align-items: center;
+gap: 15px;
+font-size: 1.2rem;
+color: #333;
+}
+.navbar-right .icon-img {
+width: 24px; 
+height: auto;
+display: inline-block;
+cursor: pointer;
+}
+.navbar-right .icon-img:hover {
+transform: scale(1.1);
+}
+
+/* CAROUSEL */
 .carousel {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    background-color: #ddd;
-    height: 300px;
+position: relative;
+max-width: 100%;
+overflow: hidden;
+background-color: #ddd;
+height: 300px;
 }
-
 .carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+display: flex;
+transition: transform 0.5s ease-in-out;
 }
-
 .carousel-slide {
-    min-width: 100%;
-    text-align: center;
-    line-height: 300px;
-    background-color: #bbb;
+min-width: 100%;
+text-align: center;
+line-height: 300px;
+background-color: #bbb;
 }
-
 .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: rgba(0,0,0,0.5);
+color: white;
+border: none;
+padding: 10px;
+cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* DISCOUNT OFFERS (3 in a row, single baseline, slider line) */
+.discount-offers {
+position: relative;       
+display: flex;
+justify-content: space-around; 
+align-items: center;
+margin: 20px auto; 
+max-width: 1200px; 
+border-bottom: 2px solid #ccc; /* single baseline */
+padding-bottom: 15px; 
+}
+.discount-item {
+text-align: center;
+cursor: pointer;
+}
+.discount-item img {
+margin-bottom: 10px;
+}
+/* The moving thicker bar that slides below hovered discount */
+.slider-line {
+position: absolute;
+bottom: 0;
+left: 0;
+height: 4px;
+width: 0;             
+background-color: #999;
+transition: left 0.3s ease, width 0.3s ease;
+}
+.discount-separator {
+border: 0;
+border-top: 1px solid #ddd;
+margin: 20px 0;
 }
 
-.prev {
-    left: 10px;
-}
 
-.next {
-    right: 10px;
-}
-
-.categories, .favorites, .top-picks, .main-products {
-    padding: 20px;
-    background-color: #fff;
-    margin: 10px 0;
-}
-
-.category-list {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-.category {
-    background-color: #eee;
-    width: 180px;
-    height: 250px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: visible;
-    z-index: 1;
-}
-
-.product-list, .product-grid {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.product-card {
-    background-color: #eee;
-    padding: 20px;
-    flex: 1 1 calc(25% - 30px);
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-}
-
-/* Favorites, Top Picks, & View More sections are unchanged */
-.favorites-slider {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-.favorites-prev,
-.favorites-next {
-    background: none;
-    border: none;
-    outline: none;
-    font-size: 2rem;
-    color: #555;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    padding: 0.5rem;
-}
-.favorites-prev:hover,
-.favorites-next:hover {
-    color: #000;
-}
-.favorites-prev {
-    left: 0;
-}
-.favorites-next {
-    right: 0;
-}
-.favorites-container {
-    position: relative;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 350px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.favorite-item {
-    position: absolute;
-    width: 180px;
-    height: 240px;
-    background-color: #eee;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: transform 0.3s, z-index 0.3s;
-}
-
-.top-picks-slider {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-.top-picks-prev,
-.top-picks-next {
-    background: none;
-    border: none;
-    outline: none;
-    font-size: 2rem;
-    color: #555;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    padding: 0.5rem;
-}
-.top-picks-prev:hover,
-.top-picks-next:hover {
-    color: #000;
-}
-.top-picks-prev {
-    left: 0;
-}
-.top-picks-next {
-    right: 0;
-}
-.top-picks-container {
-    position: relative;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 350px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.top-picks-item {
-    position: absolute;
-    width: 180px;
-    height: 240px;
-    background-color: #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: transform 0.3s, z-index 0.3s;
-}
-
-/* View More (3 rows of 3 portrait boxes) */
-.view-more {
+.categories {
   padding: 20px;
   background-color: #fff;
   margin: 10px 0;
-}
-.view-more-title {
   text-align: center;
-  text-decoration: underline;
-  margin-bottom: 50px;
 }
-.portrait-row {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin-bottom: 50px;
-}
-.portrait-box {
+
+.categories-container {
   position: relative;
-  width: 220px; 
-  height: 250px;
-  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the container */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-list {
+  display: flex;
+  gap: 20px;
+  overflow: visible; /* Change to visible to prevent clipping */
+  flex: 1;
+  margin: 0 20px; /* Add some margin to avoid overlap with arrows */
+  justify-content: flex-start; /* Align categories to the start */
+  padding: 10px 0; /* Add padding to accommodate hover effect */
+}
+
+.category {
+  background-color: #eee;
+  width: 150px;
+  height: 220px;
+  text-align: center;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 15px;
-  text-align: center;
-}
-.heart-circle {
-  position: absolute;
-  top: -10px; 
-  right: -10px; 
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 50%;
+  transition: transform 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: visible; /* Ensure content inside is not clipped */
+  z-index: 1;
+  font-weight: bold;
+  margin-bottom: 10px; /* Add margin to prevent bottom clipping */
+}
+
+/* Arrow buttons for categories */
+.cat-prev,
+.cat-next {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  color: #555;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 2;
+}
+
+.cat-prev:hover,
+.cat-next:hover {
+  color: #000;
+}
+
+.cat-prev {
+  margin-right: 10px; /* Adjust spacing */
+}
+
+.cat-next {
+  margin-left: 10px; /* Adjust spacing */
+}
+
+.category:hover {
+  transform: scale(1.05);
+  z-index: 3; /* Bring hovered item to the top */
+}
+
+/* FAVORITES SECTION */
+.favorites {
+padding: 20px;
+background-color: #fff;
+margin: 10px 0;
+}
+.favorites-slider {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 20px;
+}
+.favorites-prev,
+.favorites-next {
+background: none;
+border: none;
+outline: none;
+font-size: 2rem;
+color: #555;
+cursor: pointer;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+z-index: 2;
+padding: 0.5rem;
+}
+.favorites-prev:hover,
+.favorites-next:hover {
+color: #000;
+}
+.favorites-prev { left: 0; }
+.favorites-next { right: 0; }
+.favorites-container {
+position: relative;
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+height: 350px;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.favorite-item {
+position: absolute;
+width: 180px;
+height: 240px;
+background-color: #eee;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+transition: transform 0.3s, z-index 0.3s;
+}
+
+/* TOP PICKS SECTION */
+.top-picks {
+padding: 20px;
+background-color: #fff;
+margin: 10px 0;
+}
+.top-picks-slider {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 20px;
+}
+.top-picks-prev,
+.top-picks-next {
+background: none;
+border: none;
+outline: none;
+font-size: 2rem;
+color: #555;
+cursor: pointer;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+z-index: 2;
+padding: 0.5rem;
+}
+.top-picks-prev:hover,
+.top-picks-next:hover {
+color: #000;
+}
+.top-picks-prev { left: 0; }
+.top-picks-next { right: 0; }
+.top-picks-container {
+position: relative;
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+height: 350px;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.top-picks-item {
+position: absolute;
+width: 180px;
+height: 240px;
+background-color: #ddd;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+transition: transform 0.3s, z-index 0.3s;
+}
+
+/* VIEW MORE PRODUCTS */
+.view-more {
+padding: 20px;
+background-color: #fff;
+margin: 10px 0;
+}
+.view-more-title {
+text-align: center;
+text-decoration: underline;
+margin-bottom: 50px;
+}
+.portrait-row {
+display: flex;
+justify-content: center;
+gap: 50px;
+margin-bottom: 50px;
+}
+.portrait-box {
+position: relative;
+width: 220px; 
+height: 250px;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+padding: 15px;
+text-align: center;
+}
+.heart-circle {
+position: absolute;
+top: -10px; 
+right: -10px; 
+width: 40px;
+height: 40px;
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .heart {
-  color: #e74c3c;
-  font-size: 1.2rem;
+color: #e74c3c;
+font-size: 1.2rem;
 }
 .portrait-img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 155px;
+width: 100%;
+height: auto;
+border-radius: 8px;
+margin-bottom: 155px;
 }
 .portrait-description {
-  margin: 0 0 8px;
-  font-size: 0.9rem;
-  color: #555;
+margin: 0 0 8px;
+font-size: 0.9rem;
+color: #555;
 }
 .portrait-price {
-  margin: 0 0 8px;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #333;
+margin: 0 0 8px;
+font-weight: bold;
+font-size: 1rem;
+color: #333;
 }
 .portrait-stars {
-  color: #FFD700; /* gold stars */
-  margin: 0;
+color: #FFD700; /* gold stars */
+margin: 0;
 }
