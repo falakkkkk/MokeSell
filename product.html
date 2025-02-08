@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <!-- Carattere font for "Moke Sell" -->
+  <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- NAVBAR from your shopping site code -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="hamburger">&#9776;</div>
+        <button class="sell-button">Sell</button>
+      </div>
+      <div class="logo" style="font-family: 'Carattere', cursive;">Moke Sell</div>
+      <div class="navbar-right icons">
+        <span class="wishlist">
+          <img src="images/wishlist.png" alt="Wishlist" class="icon-img" />
+        </span>
+        <span class="cart">
+          <img src="images/cart.png" alt="Cart" class="icon-img" />
+        </span>
+        <span class="search">
+          <img src="images/search.png" alt="Search" class="icon-img" />
+        </span>
+        <span class="notification">
+          <img src="images/notification.png" alt="Notification" class="icon-img" />
+        </span>
+        <span class="chat">
+          <img src="images/chat.png" alt="Chat" class="icon-img" />
+        </span>
+        <span class="profile">
+          <img src="images/profile.png" alt="Profile" class="icon-img" />
+        </span>
+      </div>
+    </nav>
+  </header>
+  <!-- END NAVBAR -->
+
+  <main class="product-page-container">
+    <section class="left-side">
+      <ul class="thumbnail-list">
+        <li>
+          <img
+            src="https://i.pinimg.com/736x/15/b3/04/15b304e1afb10518bf50331b0fd6f830.jpg"
+            class="thumbnail-img active-thumb"
+            alt="Thumbnail 1"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.pinimg.com/736x/5b/94/26/5b9426eee66e97751aae534b62ed9b1e.jpg"
+            class="thumbnail-img"
+            alt="Thumbnail 2"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.pinimg.com/736x/d1/56/12/d1561266aac9e9384387efce76e9e556.jpg"
+            class="thumbnail-img"
+            alt="Thumbnail 3"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.pinimg.com/736x/42/14/88/421488bd071ead0118cd1064056473ba.jpg"
+            class="thumbnail-img"
+            alt="Thumbnail 4"
+          />
+        </li>
+      </ul>
+      <figure class="big-image-container">
+        <img
+          src="https://i.pinimg.com/736x/ce/54/da/ce54da1cd50072fe98b1484ea2d709d3.jpg"
+          class="big-image"
+          alt="Main Product"
+        />
+      </figure>
+    </section>
+
+    <section class="right-side">
+      <h1 class="product-title">Perfume</h1>
+      <p class="short-desc">There will be an appropriate description here.</p>
+      <section class="star-rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </section>
+      <p class="price" id="productPrice">$40.00</p>
+
+      <section class="scent-options">
+        <ul class="scent-list">
+          <li class="scent-item active-scent" data-scent="Peony">
+            <img
+              src="https://i.pinimg.com/736x/6a/29/81/6a29814897345c71da2bae9f68116b89.jpg"
+              class="scent-img"
+              alt="Peony"
+            />
+            <p>Peony</p>
+          </li>
+          <li class="scent-item" data-scent="Musk">
+            <img
+              src="https://i.pinimg.com/736x/13/ec/db/13ecdb506abb5d9c13f36b3e9289e2f4.jpg"
+              class="scent-img"
+              alt="Musk"
+            />
+            <p>Musk</p>
+          </li>
+          <li class="scent-item" data-scent="Cinnamon">
+            <img
+              src="https://i.pinimg.com/736x/b2/01/e4/b201e44b9a2f378efd313860ec082164.jpg"
+              class="scent-img"
+              alt="Cinnamon"
+            />
+            <p>Cinnamon</p>
+          </li>
+          <li class="scent-item" data-scent="Lavender">
+            <img
+              src="https://i.pinimg.com/736x/64/c6/44/64c6443eb0547b0868356c097005888a.jpg"
+              class="scent-img"
+              alt="Lavender"
+            />
+            <p>Lavender</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="size-options">
+        <button class="size-btn active-size" data-price="40.00">20Ml</button>
+        <button class="size-btn" data-price="75.00">50Ml</button>
+        <button class="size-btn" data-price="120.00">80Ml</button>
+      </section>
+      <p class="availability">Availability: 14 in stock</p>
+      <section class="cart-controls">
+        <section class="quantity-selector">
+          <button id="decrementBtn" class="qty-btn">-</button>
+          <input type="text" id="quantityInput" value="1" min="1" readonly>
+          <button id="incrementBtn" class="qty-btn">+</button>
+        </section>
+        <button class="add-to-cart">Add to Cart</button>
+      </section>
+    </section>
+  </main>
+
+  <section class="tabs-container">
+    <nav class="tabs">
+      <button class="tab-btn active-tab" data-target="descriptionTab">Description</button>
+      <button class="tab-btn" data-target="reviewsTab">Reviews</button>
+      <span class="tab-indicator"></span>
+    </nav>
+
+    <article class="tab-content" id="descriptionTab" style="display: block;">
+      <p>Put in Detailed Description here</p>
+    </article>
+
+    <article class="tab-content" id="reviewsTab">
+      <h2>5.0 Out Of 5</h2>
+      <section class="rating-distribution">
+        <section class="dist-row">
+          <span>5</span>
+          <span class="dist-bar">
+            <span class="dist-fill" style="width:80%"></span>
+          </span>
+        </section>
+        <section class="dist-row">
+          <span>4</span>
+          <span class="dist-bar">
+            <span class="dist-fill" style="width:15%"></span>
+          </span>
+        </section>
+        <section class="dist-row">
+          <span>3</span>
+          <span class="dist-bar">
+            <span class="dist-fill" style="width:5%"></span>
+          </span>
+        </section>
+        <section class="dist-row">
+          <span>2</span>
+          <span class="dist-bar">
+            <span class="dist-fill" style="width:0%"></span>
+          </span>
+        </section>
+        <section class="dist-row">
+          <span>1</span>
+          <span class="dist-bar">
+            <span class="dist-fill" style="width:0%"></span>
+          </span>
+        </section>
+      </section>
+      <p class="review-count">4 reviews</p>
+      <section class="review-item">
+        <section class="review-profile">
+          <img
+            src="https://i.pravatar.cc/40?u=johndoe"
+            class="profile-pic"
+            alt="John Doe"
+          >
+          <span class="reviewer-name">John Doe</span>
+        </section>
+        <section class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</section>
+        <p class="review-text">I absolutely love this plush avocado! It's super soft and arrived quickly.</p>
+      </section>
+      <section class="review-item">
+        <section class="review-profile">
+          <img
+            src="https://i.pravatar.cc/40?u=janesmith"
+            class="profile-pic"
+            alt="Jane Smith"
+          >
+          <span class="reviewer-name">Jane Smith</span>
+        </section>
+        <section class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</section>
+        <p class="review-text">Got this for my niece and she carries it everywhere. Great quality!</p>
+      </section>
+    </article>
+  </section>
+  
+
+  <script src="product.js"></script>
+</body>
+</html>
