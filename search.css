@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9e6e6; /* Dusty Pink Background */
+  }
+  
+  .navbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #d8a7a7; /* Dusty Pink Navbar */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .sell-button {
+    background-color: #fff;
+    color: #d8a7a7;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logo {
+    font-family: 'Carattere', cursive;
+    font-size: 1.8rem;
+    color: #fff;
+    justify-self: center;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .icon-img {
+    width: 24px;
+    height: auto;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .icon-img:hover {
+    transform: scale(1.1);
+  }
+  
