@@ -81,4 +81,8 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   lever.addEventListener("click", pullLever);
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> f84a3b66e5603bfe4d41ba77cab7f0249378bf31
