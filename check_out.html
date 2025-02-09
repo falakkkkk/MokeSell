@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moke Sell – Shipping</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="check_ut.css">
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-jQAr0tAyC43izv7Xf3nm+D4CAXoSEc3UQ2KJp8olBeET8Ti6ghinIEC1XNMBl+AONegSx6B+BrcTj5v7G3yzBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <!-- HEADER / NAVBAR using the previous prompt's code -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="hamburger">&#9776;</div>
+        <button class="sell-button">Sell</button>
+      </div>
+      <div class="logo">Moke Sell</div>
+      <div class="navbar-right icons">
+        <span class="wishlist">
+          <img src="images/wishlist.png" alt="Wishlist" class="icon-img" />
+        </span>
+        <span class="cart">
+          <img src="images/cart.png" alt="Cart" class="icon-img" />
+        </span>
+        <span class="search">
+          <img src="images/search.png" alt="Search" class="icon-img" />
+        </span>
+        <span class="notification">
+          <img src="images/notification.png" alt="Notification" class="icon-img" />
+        </span>
+        <span class="chat">
+          <img src="images/chat.png" alt="Chat" class="icon-img" />
+        </span>
+        <span class="profile">
+          <img src="images/profile.png" alt="Profile" class="icon-img" />
+        </span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content (Checkout) -->
+  <main class="checkout-container">
+    <div class="checkout-steps">
+      <ul>
+        <li class="active">
+          <span class="step-number">Step 1</span>
+          <span class="step-text">Shipping</span>
+        </li>
+        <li>
+          <span class="step-number">Step 2</span>
+          <span class="step-text">Payment</span>
+        </li>
+        <li>
+          <span class="step-number">Step 3</span>
+          <span class="step-text">Review</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="checkout-form">
+      <h2>Step 1</h2>
+      <h3>Shipping</h3>
+      <form>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="Bob">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name (optional)</label>
+          <input type="text" id="lastName" placeholder="Rob">
+        </div>
+
+        <div class="form-group">
+          <label for="country">Destination/Region</label>
+          <select id="country">
+            <option>Singapore</option>
+            <option>United States</option>
+            <option>Canada</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Destination/Region</label>
+          <input 
+            type="text" 
+            id="address" 
+            placeholder="5697-657 6th Ave, Singapore, Clementi 576769">
+          <a href="#" class="add-address">Add another address</a>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" placeholder="City">
+          </div>
+          <div class="form-group">
+            <label for="state">Select State</label>
+            <select id="state">
+              <option>--State--</option>
+              <option>Clementi</option>
+              <option>Jurong</option>
+              <option>Central Singapore</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="postal">Postal or zip code</label>
+            <input type="text" id="postal" placeholder="123456">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Phone Number">
+          </div>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="useBilling" />
+          <label for="useBilling">Use as billing address</label>
+        </div>
+
+        <button type="submit" class="next-step-btn">Continue to Payment</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Link to JavaScript -->
+  <script src="check_out.js"></script>
+</body>
+</html>

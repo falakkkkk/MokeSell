@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell | Moke Sell</title>
+  <link rel="stylesheet" href="listing.css">
+  <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
+  <script defer src="listing.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="hamburger">&#9776;</div>
+        <button class="sell-button">Sell</button>
+      </div>
+      <div class="logo">Moke Sell</div>
+      <div class="navbar-right icons">
+        <span class="wishlist"><img src="images/wishlist.png" alt="Wishlist" class="icon-img" /></span>
+        <span class="cart"><img src="images/cart.png" alt="Cart" class="icon-img" /></span>
+        <span class="search"><img src="images/search.png" alt="Search" class="icon-img" /></span>
+        <span class="notification"><img src="images/notification.png" alt="Notification" class="icon-img" /></span>
+        <span class="chat"><img src="images/chat.png" alt="Chat" class="icon-img" /></span>
+        <span class="profile"><img src="images/profile.png" alt="Profile" class="icon-img" /></span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="sell-container">
+    <h1>Market your item</h1>
+    <p>Sell Your Products here in a few simple steps</p>
+    <hr> <!-- Added line after the text -->
+
+    <div class="sell-form">
+      <!-- Image Upload Section -->
+      <div class="image-upload">
+        <label for="upload-image">
+          <div class="upload-box">
+            <img src="images/upload-icon.png" alt="Upload Icon" class="upload-icon"> <!-- Upload Icon -->
+            <p>Upload an image of your item</p>
+            <p>You may upload more than one image</p>
+          </div>
+        </label>
+        <input type="file" id="upload-image" multiple hidden>
+        
+        <!-- Thumbnail Preview -->
+        <div class="image-thumbnails">
+          <div class="thumbnail"></div>
+          <div class="thumbnail"></div>
+          <div class="thumbnail"></div>
+          <div class="thumbnail"></div>
+        </div>
+      </div>
+
+      <!-- Item Details -->
+      <div class="item-details">
+        <div class="form-group">
+          <label for="item-name">Name Of Item</label>
+          <input type="text" id="item-name" placeholder="Enter the name">
+        </div>
+
+        <div class="form-group">
+          <label for="item-description">Description</label>
+          <textarea id="item-description" placeholder="Enter a description..." maxlength="500"></textarea>
+          <small>Max 500 words</small>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Choose a Category</label>
+            <div id="category-container">
+              <select class="category-dropdown">
+                <option value="" disabled selected>Choose a Category</option> <!-- Placeholder option -->
+                <option>Electronics</option>
+                <option>Fashion</option>
+                <option>Home & Living</option>
+                <option>Beauty & Health</option>
+                <option>Bicycle</option>
+                <option>Kids</option>
+                <option>Games & Toys</option>
+                <option>Learning</option>
+                <option>School Supplies</option>
+                <option>Cars</option>
+                <option>Accessories</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <button class="add-category">Add another category +</button>
+          </div>
+          
+
+    <!-- Footer -->
+    <div class="sell-footer">
+      <p>Total Listing Fee: $ 0.00</p>
+      <button class="payment-btn">Proceed with Payment →</button>
+    </div>
+  </main>
+
+</body>
+</html>

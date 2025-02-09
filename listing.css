@@ -1,0 +1,318 @@
+/* =============================
+   RESET / GLOBAL STYLES
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* =============================
+     NAVBAR (Same as previous pages)
+  ============================== */
+  .navbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .sell-button {
+    background-color: #333;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logo {
+    font-family: 'Carattere', cursive;
+    font-size: 1.8rem;
+    margin-left: 450px; /* or remove if you want exact center via the grid */
+    }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .navbar-right .icon-img {
+    width: 24px;
+    height: auto;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .navbar-right .icon-img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* =============================
+     SELL FORM SECTION
+  ============================== */
+  .sell-container {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .sell-container h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  
+  .sell-container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .sell-container hr {
+    width: 100%;
+    margin: 20px; /* This adds 10px space below the line */
+    border: 0.5px solid #ddd;
+}
+
+  
+  /* FORM LAYOUT */
+  .sell-form {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: flex-start;
+  }
+  
+  /* IMAGE UPLOAD */
+  .image-upload {
+    text-align: center;
+  }
+  
+  .upload-box {
+    width: 350px;
+    height: 350px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: -120px;
+  }
+  
+  .upload-box img {
+    width: 80px;
+    margin-left: -120px;
+  }
+  
+  .upload-box p {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .image-thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: -120px;
+    gap: 5px;
+  }
+  
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    background: #ddd;
+    border-radius: 4px;
+  }
+  
+  /* ITEM DETAILS */
+  .item-details {
+    width: 350px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .form-group textarea {
+    height: 100px;
+  }
+  
+  .add-category, .add-variation {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+  }
+  
+  /* VARIATION */
+  .variation {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .variation input {
+    width: 48%;
+  }
+
+  /* Center the label (heading) above input and textarea */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center; /* Center the label */
+    margin-bottom: 8px;
+}
+
+/* Keep text inside the input and textarea left-aligned */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: left; /* Left-aligned text inside the box */
+    transition: 0.3s ease-in-out;
+}
+/* Center the label (heading) above input and textarea */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center; /* Center the label */
+    margin-bottom: 8px;
+}
+
+/* Keep text inside the input and textarea left-aligned */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px; /* Ensures the font is the same */
+    text-align: left; /* Left-aligned text inside the box */
+    transition: 0.3s ease-in-out;
+}
+
+/* Increase the height of the description box */
+.form-group textarea {
+    height: 180px; /* Increased height */
+    resize: none; /* Prevent resizing for uniformity */
+}
+.category-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.remove-category {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.remove-category:hover {
+    background: #cc0000;
+}
+
+  
+  /* FOOTER */
+
+.sell-footer {
+    width: 100%; /* Make sure it spans the full width */
+    display: flex;
+    justify-content: space-between; /* Listing fee on left, button on right */
+    align-items: center;
+    border-top: 1px solid #ddd; /* Full-width line */
+    padding: 15px 30px;
+    margin-top: 20px; /* Adds space below the last item */
+    position: relative;
+}
+
+/* Push the footer to the bottom properly */
+.sell-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Makes sure it fills the entire page */
+}
+
+/* Ensure category container expands dynamically */
+#category-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Fix spacing between listing fee and button */
+.sell-footer p {
+    margin: 0;
+    font-size: 16px;
+    flex: 1; /* Makes sure it stays to the left */
+}
+
+/* Ensure the payment button is aligned properly */
+.payment-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: auto; /* Pushes it to the right */
+}
+
+.payment-btn:hover {
+    background-color: #555;
+}
+
