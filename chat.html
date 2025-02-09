@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chat Interface</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet" />
+    <link rel="stylesheet" href="chat.css" />
+  </head>
+  <body>
+    <div class="navbar-placeholder"></div>
+
+    <div class="chat-page">
+      <div class="chat-controls">
+        <button class="control-btn search-btn">Search</button>
+        <div class="controls-right">
+          <button class="control-btn clear-btn">Clear Chat</button>
+          <button class="control-btn more-btn">More</button>
+        </div>
+      </div>
+
+
+      <div class="chat-main">
+        <div class="contacts-panel">
+          <div class="contacts-header">
+            <h2>Contacts</h2>
+            <input type="text" id="contactSearch" placeholder="Search Contacts" />
+          </div>
+          <div class="contacts-list" id="contactsList">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <img src="https://via.placeholder.com/40" alt="John Doe" />
+              </div>
+              <div class="contact-details">
+                <span class="contact-name">John Doe</span>
+                <span class="contact-message">Hello, how are you?</span>
+              </div>
+              <div class="contact-time">2:30 PM</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <img src="https://via.placeholder.com/40" alt="Jane Smith" />
+              </div>
+              <div class="contact-details">
+                <span class="contact-name">Jane Smith</span>
+                <span class="contact-message">Let's catch up!</span>
+              </div>
+              <div class="contact-time">1:15 PM</div>
+            </div>
+
+          </div>
+        </div>
+        <div class="chat-window">
+          <div class="chat-window-header">
+            <h3>John Doe</h3>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+              <img class="message-icon" src="https://via.placeholder.com/30" alt="Bot" />
+              <div class="message-content">
+                Hello, how can I help you today?
+              </div>
+            </div>
+            <div class="chat-message user">
+              <img class="message-icon" src="https://via.placeholder.com/30" alt="User" />
+              <div class="message-content">
+                I need some information.
+              </div>
+            </div>
+          </div>
+          <div class="chat-input">
+            <button class="emoji-btn">😊</button>
+            <input type="text" id="chatInput" placeholder="Type a message..." />
+            <button id="sendMessageBtn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="chat.js"></script>
+  </body>
+</html>

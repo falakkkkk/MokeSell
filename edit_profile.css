@@ -147,7 +147,14 @@
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 8px 12px rgba(224, 176, 255, 0.8);
+    transition: box-shadow 0.3s ease;
   }
+  
+  .profile-image img:hover {
+    box-shadow: 0 10px 16px rgba(224, 176, 255, 0.9);
+  }
+  
   
   .edit-btn {
     position: absolute;
@@ -224,22 +231,26 @@
   }
  
   .save-button-container {
-    text-align: center;
-  }
-  
-  .save-btn {
-    background: #ff6600;
+    width: 110%;          /* Ensure container spans full width */
+    text-align: right;   /* Center inline elements inside it */
+    margin-top: 80px;     /* Adjust spacing as needed */
+}
+
+.save-btn {
+    display: inline-block;  /* Allow margin auto to work */
+    margin: 0 auto;         /* Center the button */
+    background: #D1A3FF;
     color: #fff;
     border: none;
-    padding-left: 50px;
     padding: 12px 30px;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s;
-  }
+}
+
   
   .save-btn:hover {
-    background: #e65c00;
+    background: #6b0454;
   }
   

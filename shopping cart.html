@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="shopping cart.css">
+</head>
+<body>
+  <header class="navbar-placeholder"></header>
+  <main class="container">
+    <section class="cart">
+      <header class="cart-header">
+        <h2 class="title">SHOPPING CART</h2>
+        <hr class="title-line">
+      </header>
+      <section id="cartItemsContainer"></section>
+      <hr class="item-divider">
+    </section>
+    <aside class="summary">
+      <header class="summary-header">
+        <h2 class="title">TOTAL</h2>
+        <hr class="title-line">
+      </header>
+      <section class="summary-details">
+        <p class="summary-row">
+          <span>SUBTOTAL</span>
+          <span class="value" id="subtotalValue"></span>
+        </p>
+        <p class="summary-row">
+          <span>SHIPPING</span>
+          <span class="value">Calculated at Checkout</span>
+        </p>
+        <hr class="divider">
+        <p class="summary-row total">
+          <span>TOTAL</span>
+          <span class="value" id="totalValue"></span>
+        </p>
+        <hr class="divider">
+        <section class="discount-code">
+          <input type="text" placeholder="DISCOUNT CODE" id="promoCode">
+          <span class="arrow">&rarr;</span>
+        </section>
+        <button class="checkout-btn">CHECKOUT NOW</button>
+      </section>
+    </aside>
+  </main>
+  <script src="shopping cart.js"></script>
+</body>
+</html>

@@ -1,65 +1,66 @@
 body {
-  font-family: Arial, sans-serif; /* You can keep this for general text */
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
 }
 
-/* NAVBAR */
+/* NAVBAR as a 3-column Grid */
 .navbar {
   display: grid;
-  /* 3 columns: (hamburger+Sell) | (Moke Sell) | (icons) */
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto; /* Left | Center | Right */
   align-items: center;
   padding: 15px 30px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Left Section: Hamburger + Sell Button */
 .navbar-left {
-display: flex;
-align-items: center;
-gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .hamburger {
-font-size: 1.5rem;
-cursor: pointer;
-color: #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
 }
 .sell-button {
-background-color: #333;
-color: #fff;
-border: none;
-padding: 6px 12px;
-font-size: 1rem;
-border-radius: 4px;
-cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-/* Center brand "Moke Sell" */
+/* Center: "Moke Sell" in the middle column, truly centered */
 .logo {
-font-family: 'Carattere', cursive;
-font-size: 1.8rem;
-margin-left: 350px; /* or remove if you want exact center via the grid */
+  font-family: 'Carattere', cursive;
+  font-size: 1.8rem;
+  justify-self: center; /* centers the logo horizontally in the middle grid cell */
 }
 
-/* Right side icons */
+/* Right Section: Icons */
 .navbar-right {
-display: flex;
-align-items: center;
-gap: 15px;
-font-size: 1.2rem;
-color: #333;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+  color: #333;
 }
 .navbar-right .icon-img {
-width: 24px; 
-height: auto;
-display: inline-block;
-cursor: pointer;
+  width: 24px;
+  height: auto;
+  display: inline-block;
+  cursor: pointer;
 }
 .navbar-right .icon-img:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
 }
+
 
 /* CAROUSEL */
 .carousel {
