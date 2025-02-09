@@ -1,83 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Chat Interface</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet" />
-    <link rel="stylesheet" href="chat.css" />
-  </head>
-  <body>
-    <div class="navbar-placeholder"></div>
-
-    <div class="chat-page">
-      <div class="chat-controls">
-        <button class="control-btn search-btn">Search</button>
-        <div class="controls-right">
-          <button class="control-btn clear-btn">Clear Chat</button>
-          <button class="control-btn more-btn">More</button>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Interface</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="hamburger">&#9776;</div>
+        <button class="sell-button">Sell</button>
       </div>
-
-
-      <div class="chat-main">
-        <div class="contacts-panel">
-          <div class="contacts-header">
-            <h2>Contacts</h2>
-            <input type="text" id="contactSearch" placeholder="Search Contacts" />
-          </div>
-          <div class="contacts-list" id="contactsList">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <img src="https://via.placeholder.com/40" alt="John Doe" />
-              </div>
-              <div class="contact-details">
-                <span class="contact-name">John Doe</span>
-                <span class="contact-message">Hello, how are you?</span>
-              </div>
-              <div class="contact-time">2:30 PM</div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <img src="https://via.placeholder.com/40" alt="Jane Smith" />
-              </div>
-              <div class="contact-details">
-                <span class="contact-name">Jane Smith</span>
-                <span class="contact-message">Let's catch up!</span>
-              </div>
-              <div class="contact-time">1:15 PM</div>
-            </div>
-
-          </div>
-        </div>
-        <div class="chat-window">
-          <div class="chat-window-header">
-            <h3>John Doe</h3>
-          </div>
-          <div class="chat-messages" id="chatMessages">
-            <div class="chat-message bot">
-              <img class="message-icon" src="https://via.placeholder.com/30" alt="Bot" />
-              <div class="message-content">
-                Hello, how can I help you today?
-              </div>
-            </div>
-            <div class="chat-message user">
-              <img class="message-icon" src="https://via.placeholder.com/30" alt="User" />
-              <div class="message-content">
-                I need some information.
-              </div>
-            </div>
-          </div>
-          <div class="chat-input">
-            <button class="emoji-btn">😊</button>
-            <input type="text" id="chatInput" placeholder="Type a message..." />
-            <button id="sendMessageBtn">Send</button>
-          </div>
-        </div>
+      <div class="logo">Moke Sell</div>
+      <div class="navbar-right icons">
+        <span class="wishlist">
+          <img src="images/wishlist.png" alt="Wishlist" class="icon-img" />
+        </span>
+        <a href="shopping cart.html" class="cart">
+          <img src="images/cart.png" alt="Cart" class="icon-img" />
+        </a>
+        <span class="search">
+          <img src="images/search.png" alt="Search" class="icon-img" />
+        </span>
+        <span class="notification">
+          <img src="images/notification.png" alt="Notification" class="icon-img" />
+        </span>
+        <a href="chat.html" class="chat">
+          <img src="images/chat.png" alt="Chat" class="icon-img" />
+        </a>
+        <a href="edit_profile.html" class="profile">
+          <img src="images/profile.png" alt="Profile" class="icon-img" />
+        </a>
       </div>
-    </div>
-
-    <script src="chat.js"></script>
-  </body>
+    </nav>
+  </header>
+  
+  <main class="chat-page">
+    <section class="chat-controls">
+      <button class="control-btn search-btn">Search</button>
+      <section class="controls-right">
+        <button class="control-btn clear-btn">Clear Chat</button>
+        <button class="control-btn more-btn">More</button>
+      </section>
+    </section>
+    <section class="chat-main">
+      <aside class="contacts-panel">
+        <header class="contacts-header">
+          <h2>Contacts</h2>
+          <input type="text" id="contactSearch" placeholder="Search Contacts">
+        </header>
+        <section class="contacts-list" id="contactsList">
+          <article class="contact-item">
+            <figure class="contact-icon">
+              <img src="https://via.placeholder.com/40" alt="John Doe">
+            </figure>
+            <section class="contact-details">
+              <p class="contact-name">John Doe</p>
+              <p class="contact-message">Hello, how are you?</p>
+            </section>
+            <time class="contact-time">2:30 PM</time>
+          </article>
+          <article class="contact-item">
+            <figure class="contact-icon">
+              <img src="https://via.placeholder.com/40" alt="Jane Smith">
+            </figure>
+            <section class="contact-details">
+              <p class="contact-name">Jane Smith</p>
+              <p class="contact-message">Let's catch up!</p>
+            </section>
+            <time class="contact-time">1:15 PM</time>
+          </article>
+        </section>
+      </aside>
+      <section class="chat-window">
+        <header class="chat-window-header">
+          <h3>John Doe</h3>
+        </header>
+        <section class="chat-messages" id="chatMessages">
+          <article class="chat-message bot">
+            <img class="message-icon" src="https://via.placeholder.com/30" alt="Bot">
+            <p class="message-content">Hello, how can I help you today?</p>
+          </article>
+          <article class="chat-message user">
+            <img class="message-icon" src="https://via.placeholder.com/30" alt="User">
+            <p class="message-content">I need some information.</p>
+          </article>
+        </section>
+        <footer class="chat-input">
+          <button class="emoji-btn">😊</button>
+          <input type="text" id="chatInput" placeholder="Type a message...">
+          <button id="sendMessageBtn">Send</button>
+        </footer>
+      </section>
+    </section>
+  </main>
+  <script src="chat.js"></script>
+</body>
 </html>

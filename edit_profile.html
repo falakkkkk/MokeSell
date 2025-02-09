@@ -1,90 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User Profile Dashboard</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile Dashboard</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="edit_profile.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="hamburger">&#9776;</div>
+        <button class="sell-button">Sell</button>
+      </div>
+      <div class="logo">Moke Sell</div>
+      <div class="navbar-right icons">
+        <span class="wishlist">
+          <img src="images/wishlist.png" alt="Wishlist" class="icon-img" />
+        </span>
+        <a href="shopping cart.html">
+          <span class="cart">
+            <img src="images/cart.png" alt="Cart" class="icon-img" />
+          </span>
+        </a>
+        <span class="search">
+          <img src="images/search.png" alt="Search" class="icon-img" />
+        </span>
+        <span class="notification">
+          <img src="images/notification.png" alt="Notification" class="icon-img" />
+        </span>
+        <a href="chat.html">
+          <span class="chat">
+            <img src="images/chat.png" alt="Chat" class="icon-img" />
+          </span>
+        </a>
+        <a href="edit_profile.html">
+          <span class="profile">
+            <img src="images/profile.png" alt="Profile" class="icon-img" />
+          </span>
+        </a>
+      </div>
+    </nav>
+  </header>
 
-    <link rel="stylesheet" href="edit_profile.css" />
-  </head>
-  <body>
+  <div class="page-container">
+    <div class="sidebar">
+      <h2 class="sidebar-heading">User Profile</h2>
+      <ul class="nav">
+        <li class="nav-item"><a href="edit_profile.html">User Info</a></li>
+        <li class="nav-item"><a href="leader_board.html">LeaderBoard</a></li>
+        <li class="nav-item"><a href="listing.html">Listing</a></li>
+        <li class="nav-item"><a href="#">Followers</a></li>
+        <li class="nav-item"><a href="#">Reviews</a></li>
+        <li class="nav-item"><a href="#">Coins</a></li>
+        <li class="nav-item"><a href="#">Balance</a></li>
+        <li class="nav-item"><a href="games.html">Game</a></li>
+      </ul>
+      <div class="logout">
+        <a href="#">Logout</a>
+      </div>
+      <div class="vertical-separator">
+        <div class="nav-indicator"></div>
+      </div>
+    </div>
 
-    <header class="top-nav">
-      <h1>My Dashboard</h1>
-    </header>
-
-    <div class="page-container">
-      <div class="sidebar">
-        <h2 class="sidebar-heading">User Profile</h2>
-        <ul class="nav">
-          <li class="nav-item active" data-tab="user-info">User Info</li>
-          <li class="nav-item" data-tab="leaderboard">LeaderBoard</li>
-          <li class="nav-item" data-tab="listing">Listing</li>
-          <li class="nav-item" data-tab="followers">Followers</li>
-          <li class="nav-item" data-tab="reviews">Reviews</li>
-          <li class="nav-item" data-tab="coins">Coins</li>
-          <li class="nav-item" data-tab="balance">Balance</li>
-          <li class="nav-item" data-tab="game">Game</li>
-        </ul>
-        <div class="logout">
-          <a href="#">Logout</a>
+    <div class="main-content">
+      <div class="profile-header">
+        <div class="profile-image">
+          <img src="https://i.pinimg.com/736x/58/69/12/586912499e6d51122e26b8940c05dc1a.jpg" alt="Profile Image" id="profileImage">
+          <button class="edit-btn" id="editBtn">Edit</button>
+          <input type="file" id="fileInput" accept="image/*" style="display:none;">
         </div>
-        <div class="vertical-separator">
-          <div class="nav-indicator"></div>
+        <div class="profile-info">
+          <h1 class="user-name">John Doe</h1>
+          <p class="user-country">Singapore</p>
         </div>
       </div>
-
-      <div class="main-content">
-        <div class="profile-header">
-          <div class="profile-image">
-            <img src="https://i.pinimg.com/736x/58/69/12/586912499e6d51122e26b8940c05dc1a.jpg" alt="Profile Image" id="profileImage">
-            <button class="edit-btn" id="editBtn">Edit</button>
-            <input type="file" id="fileInput" accept="image/*" style="display:none;">
+      <div class="update-form">
+        <div class="form-columns">
+          <div class="column">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="location">Location</label>
+              <input type="text" id="location" placeholder="Location">
+            </div>
           </div>
-          <div class="profile-info">
-            <h1 class="user-name">John Doe</h1>
-            <p class="user-country">Singapore</p>
+          <div class="column">
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+              <label for="number">Number</label>
+              <input type="tel" id="number" placeholder="Number">
+            </div>
+            <div class="form-group">
+              <label for="postal-code">Postal Code</label>
+              <input type="text" id="postal-code" placeholder="Postal Code">
+            </div>
           </div>
         </div>
-        <div class="update-form">
-          <div class="form-columns">
-            <div class="column">
-              <div class="form-group">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" placeholder="First Name">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <label for="location">Location</label>
-                <input type="text" id="location" placeholder="Location">
-              </div>
-            </div>
-            <div class="column">
-              <div class="form-group">
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" placeholder="Last Name">
-              </div>
-              <div class="form-group">
-                <label for="number">Number</label>
-                <input type="tel" id="number" placeholder="Number">
-              </div>
-              <div class="form-group">
-                <label for="postal-code">Postal Code</label>
-                <input type="text" id="postal-code" placeholder="Postal Code">
-              </div>
-            </div>
-          </div>
-          <div class="save-button-container">
-            <button class="save-btn">Save Changes</button>
-          </div>
+        <div class="save-button-container">
+          <button class="save-btn">Save Changes</button>
         </div>
       </div>
     </div>
-    <script src="edit-profile.js"></script>
-  </body>
+  </div>
+  <script src="edit-profile.js"></script>
+</body>
 </html>

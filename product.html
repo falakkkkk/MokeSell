@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="product.css">
@@ -21,21 +21,27 @@
         <span class="wishlist">
           <img src="images/wishlist.png" alt="Wishlist" class="icon-img">
         </span>
-        <span class="cart">
-          <img src="images/cart.png" alt="Cart" class="icon-img">
-        </span>
+        <a href="shopping cart.html">
+          <span class="cart">
+            <img src="images/cart.png" alt="Cart" class="icon-img">
+          </span>
+        </a>
         <span class="search">
           <img src="images/search.png" alt="Search" class="icon-img">
         </span>
         <span class="notification">
           <img src="images/notification.png" alt="Notification" class="icon-img">
         </span>
-        <span class="chat">
-          <img src="images/chat.png" alt="Chat" class="icon-img">
-        </span>
-        <span class="profile">
-          <img src="images/profile.png" alt="Profile" class="icon-img">
-        </span>
+        <a href="chat.html">
+          <span class="chat">
+            <img src="images/chat.png" alt="Chat" class="icon-img">
+          </span>
+        </a>
+        <a href="edit_profile.html">
+          <span class="profile">
+            <img src="images/profile.png" alt="Profile" class="icon-img">
+          </span>
+        </a>
       </div>
     </nav>
   </header>
@@ -152,7 +158,7 @@
           <span class="reviewer-name">John Doe</span>
         </section>
         <section class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</section>
-        <p class="review-text">I absolutely love this plush avocado! It's super soft and arrived quickly.</p>
+        <p class="review-text">I absolutely love this perfume! It's super sweet and arrived quickly.</p>
       </section>
       <section class="review-item">
         <section class="review-profile">
@@ -160,7 +166,7 @@
           <span class="reviewer-name">Jane Smith</span>
         </section>
         <section class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</section>
-        <p class="review-text">Got this for my niece and she carries it everywhere. Great quality!</p>
+        <p class="review-text">Got this for my niece and she LOVES the scent. Great quality!</p>
       </section>
     </article>
   </section>
@@ -169,8 +175,7 @@
       <h2>Shopping Cart</h2>
       <button id="closeCart" class="close-cart-btn">&times;</button>
     </div>
-    <div class="cart-items" id="cartItemsContainer">
-    </div>
+    <div class="cart-items" id="cartItemsContainer"></div>
     <hr class="cart-separator">
     <div class="cart-summary">
       <div class="summary-row">

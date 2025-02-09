@@ -11,21 +11,83 @@ body {
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
+header {
+  width: 100%;
+}
+
+/* Navbar – Using your original design */
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hamburger {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.sell-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logo {
+  font-family: 'Carattere', cursive;
+  font-size: 1.8rem;
+  justify-self: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.icon-img {
+  width: 24px;
+  height: auto;
+  cursor: pointer;
+}
+
+.icon-img:hover {
+  transform: scale(1.1);
+}
+
+/* Container for Form */
 .container {
   position: relative;
-  width: 1280px;   /* or your chosen size */
-  height: 720px;   /* or your chosen size */
+  width: 1280px;
+  height: 720px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25),
               0 10px 10px rgba(0,0,0,0.22);
+  margin: auto;
+  margin-top: 20px;
 }
 
-/* Each half takes 50% of the container and animates the left property */
+/* Form Container Styles */
 .form-container {
   position: absolute;
   top: 0;
@@ -34,17 +96,12 @@ body {
   transition: left 0.6s ease, background 0.6s ease;
 }
 
-/* Default (Login Mode):
-   • .sign-up-container is placed at left: 0 and shows the background image.
-   • .sign-in-container is placed at left: 50% and shows the login form.
-*/
 .sign-up-container {
   left: 0;
-  background: url('your-image.jpg') no-repeat center center;
+  background: url('https://i.pinimg.com/736x/19/f1/d8/19f1d87705dba6bfb734b162c24b4020.jpg') no-repeat center center;
   background-size: cover;
 }
 .sign-up-container .form-content {
-  /* Hide form content in default mode */
   opacity: 0;
   transition: opacity 0.6s ease;
 }
@@ -58,7 +115,6 @@ body {
   transition: opacity 0.6s ease;
 }
 
-/* Toggled State (Sign Up Mode): Swap positions */
 .container.signup-active .sign-up-container {
   left: 50%;
   background: none;
@@ -68,41 +124,37 @@ body {
 }
 .container.signup-active .sign-in-container {
   left: 0;
-  background: url('your-image.jpg') no-repeat center center;
+  background: url('https://i.pinimg.com/736x/19/f1/d8/19f1d87705dba6bfb734b162c24b4020.jpg') no-repeat center center;
   background-size: cover;
 }
 .container.signup-active .sign-in-container .form-content {
   opacity: 0;
 }
 
-/* Form Content Styling */
 .form-content {
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;  /* Align content at the top */
-    align-items: center;
-    padding: 50px 50px 0 50px;    /* Increase the top padding (adjust 50px as needed) */
-    height: 100%;
-    text-align: center;
-  }
-  
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px;
+  height: 100%;
+  text-align: center;
+}
 
-  form h1 {
-    margin-top: 30px;
-    font-family: 'Georgia';
-    margin-bottom: 5px;  /* Adjust as needed */
-  }
-  
-  form .subheading {
-    font-family: 'Carattere', cursive;
-    font-size: 40px;       /* Adjust as needed */
-    color: #666;
-    margin-bottom: 115px;   /* Increased space between subheading and input fields */
-  }
-  
+form h1 {
+  margin-top: 30px;
+  font-family: Georgia;
+  margin-bottom: 5px;
+}
 
-/* Underline-only Input Styling */
+form .subheading {
+  font-family: 'Carattere', cursive;
+  font-size: 40px;
+  color: #666;
+  margin-bottom: 115px;
+}
+
 form input {
   background: transparent;
   border: none;
@@ -140,7 +192,6 @@ form button:active {
   transform: scale(0.95);
 }
 
-/* Toggle Circle (remains centered) */
 .toggle-circle {
   position: absolute;
   top: 50%;

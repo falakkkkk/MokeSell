@@ -3,16 +3,74 @@
     padding: 0;
     box-sizing: border-box;
   }
+  
   body {
     font-family: Arial, sans-serif;
     background: #fafafa;
     color: #333;
   }
+  
+  .navbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .sell-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logo {
+    font-family: 'Carattere', cursive;
+    font-size: 1.8rem;
+    justify-self: center;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .icon-img {
+    width: 24px;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .icon-img:hover {
+    transform: scale(1.1);
+  }
+  
   .navbar-placeholder {
     width: 100%;
     height: 60px;
     background: #eaeaea;
   }
+  
   .container {
     width: 100%;
     padding: 60px 40px;
@@ -20,9 +78,11 @@
     gap: 50px;
     align-items: flex-start;
   }
+  
   .payment-left {
     flex: 65;
   }
+  
   .payment-left header h2 {
     font-size: 24px;
     font-family: Georgia, serif;
@@ -31,26 +91,32 @@
     border-bottom: 1px solid #ccc;
     width: 95%;
   }
+  
   .payment-method p {
     margin-bottom: 15px;
     font-size: 16px;
   }
+  
   .payment-method input[type="radio"] {
     margin-right: 10px;
   }
+  
   .card-details {
     margin-top: 20px;
   }
+  
   .card-details-row {
     display: flex;
     gap: 30px;
   }
+  
   .card-column {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
+  
   .credit-field {
     width: 100%;
     padding: 5px 0;
@@ -60,12 +126,15 @@
     border-bottom: 1px solid #ccc;
     outline: none;
   }
+  
   .credit-field::placeholder {
     color: #999;
   }
+  
   .payment-navigation {
     margin-top: 30px;
   }
+  
   .continue-btn {
     background: #000;
     color: #fff;
@@ -74,20 +143,24 @@
     cursor: pointer;
     font-size: 16px;
   }
+  
   .back-link {
     margin-top: 15px;
   }
+  
   .back-link a {
     text-decoration: underline;
     color: #000;
     font-size: 16px;
   }
+  
   .payment-right {
     flex: 35;
     background: #fff;
     padding: 20px;
     border: 1px solid #ccc;
   }
+  
   .payment-right header h2 {
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
@@ -97,52 +170,62 @@
     width: 95%;
     margin: 0 auto 20px auto;
   }
+  
   .summary-line {
     width: 95%;
     border: none;
     border-bottom: 1px solid #ccc;
     margin: 0 auto 20px auto;
   }
+  
   .order-items .order-item {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
   }
+  
   .order-item figure {
     margin: 0;
     width: 50px;
     height: 50px;
     flex-shrink: 0;
   }
+  
   .order-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  
   .order-item-details {
     margin-left: 10px;
   }
+  
   .order-item-details .product-name {
     font-weight: bold;
     font-size: 16px;
     margin-bottom: 5px;
   }
+  
   .order-item-details .product-quantity,
   .order-item-details .product-price {
     font-size: 14px;
   }
+  
   .order-summary p {
     font-size: 16px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
   }
+  
   .order-divider {
     width: 95%;
     border: none;
     border-bottom: 1px solid #ccc;
     margin: 10px auto;
   }
+  
   .order-summary .total {
     font-weight: bold;
     font-size: 18px;
