@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Review</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+  <div class="checkout-container">
+    <aside class="progress-sidebar">
+      <div class="step completed">Step 1 <span>Shipping</span></div>
+      <div class="step completed">Step 2 <span>Payment</span></div>
+      <div class="step active">Step 3 <span>Review</span></div>
+    </aside>
+
+    <main class="checkout-content">
+      <h1 class="checkout-title">Review</h1>
+      <div class="summary">
+        <p><strong>Shipping Address:</strong> John Doe, 6673-657 Elm Ave, Singapore</p>
+        <p><strong>Payment:</strong> Visa ending in **** 6789</p>
+      </div>
+
+      <div class="review-buttons">
+        <button class="back-btn" onclick="goToPage('shipping.html')">Back</button>
+        <button class="confirm-btn">Place Order</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

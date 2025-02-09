@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    color: #333;
+  }
+  .navbar-placeholder {
+    width: 100%;
+    height: 60px;
+    background: #eaeaea;
+  }
+  .container {
+    width: 100%;
+    padding: 60px 40px;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+  }
+  .payment-left {
+    flex: 65;
+  }
+  .payment-left header h2 {
+    font-size: 24px;
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 95%;
+  }
+  .payment-method p {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  .payment-method input[type="radio"] {
+    margin-right: 10px;
+  }
+  .card-details {
+    margin-top: 20px;
+  }
+  .card-details-row {
+    display: flex;
+    gap: 30px;
+  }
+  .card-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .credit-field {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+  }
+  .credit-field::placeholder {
+    color: #999;
+  }
+  .payment-navigation {
+    margin-top: 30px;
+  }
+  .continue-btn {
+    background: #000;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .back-link {
+    margin-top: 15px;
+  }
+  .back-link a {
+    text-decoration: underline;
+    color: #000;
+    font-size: 16px;
+  }
+  .payment-right {
+    flex: 35;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  .payment-right header h2 {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 95%;
+    margin: 0 auto 20px auto;
+  }
+  .summary-line {
+    width: 95%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto 20px auto;
+  }
+  .order-items .order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .order-item figure {
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+  }
+  .order-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .order-item-details {
+    margin-left: 10px;
+  }
+  .order-item-details .product-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .order-item-details .product-quantity,
+  .order-item-details .product-price {
+    font-size: 14px;
+  }
+  .order-summary p {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .order-divider {
+    width: 95%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin: 10px auto;
+  }
+  .order-summary .total {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  

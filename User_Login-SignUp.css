@@ -2,12 +2,13 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: #f6f5f7;
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,86 +16,131 @@ body {
 }
 
 .container {
-  width: 1020px;
-  height: 600px;
   position: relative;
+  width: 1280px;   /* or your chosen size */
+  height: 720px;   /* or your chosen size */
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+              0 10px 10px rgba(0,0,0,0.22);
 }
 
+/* Each half takes 50% of the container and animates the left property */
 .form-container {
   position: absolute;
   top: 0;
   width: 50%;
   height: 100%;
-  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  transition: left 0.6s ease, background 0.6s ease;
+}
+
+/* Default (Login Mode):
+   • .sign-up-container is placed at left: 0 and shows the background image.
+   • .sign-in-container is placed at left: 50% and shows the login form.
+*/
+.sign-up-container {
+  left: 0;
+  background: url('your-image.jpg') no-repeat center center;
+  background-size: cover;
+}
+.sign-up-container .form-content {
+  /* Hide form content in default mode */
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
 
 .sign-in-container {
-  left: 0;
-  z-index: 2;
+  left: 50%;
+  background: none;
 }
-
-.sign-up-container {
-  right: 0;
-  z-index: 1;
-  opacity: 0;
-}
-
-.container.right-panel-active .sign-in-container {
-  transform: translateX(100%);
-  opacity: 0;
-}
-
-.container.right-panel-active .sign-up-container {
-  transform: translateX(-100%);
+.sign-in-container .form-content {
   opacity: 1;
-  z-index: 2;
+  transition: opacity 0.6s ease;
 }
 
-form {
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 0 50px;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* Toggled State (Sign Up Mode): Swap positions */
+.container.signup-active .sign-up-container {
+  left: 50%;
+  background: none;
+}
+.container.signup-active .sign-up-container .form-content {
+  opacity: 1;
+}
+.container.signup-active .sign-in-container {
+  left: 0;
+  background: url('your-image.jpg') no-repeat center center;
+  background-size: cover;
+}
+.container.signup-active .sign-in-container .form-content {
+  opacity: 0;
 }
 
-h1 {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
+/* Form Content Styling */
+.form-content {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* Align content at the top */
+    align-items: center;
+    padding: 50px 50px 0 50px;    /* Increase the top padding (adjust 50px as needed) */
+    height: 100%;
+    text-align: center;
+  }
+  
 
-input {
-  background: #eee;
+  form h1 {
+    margin-top: 30px;
+    font-family: 'Georgia';
+    margin-bottom: 5px;  /* Adjust as needed */
+  }
+  
+  form .subheading {
+    font-family: 'Carattere', cursive;
+    font-size: 40px;       /* Adjust as needed */
+    color: #666;
+    margin-bottom: 115px;   /* Increased space between subheading and input fields */
+  }
+  
+
+/* Underline-only Input Styling */
+form input {
+  background: transparent;
   border: none;
+  border-bottom: 2px solid #ccc;
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+  font-size: 10px;
+  transition: border-color 0.3s ease;
+  margin-left: 30px;
 }
 
-button {
-  border-radius: 20px;
+form input:focus {
+  outline: none;
+  border-bottom-color: #2575fc;
+}
+
+form button {
+  border-radius: 10px;
   border: 1px solid #2575fc;
-  background: #2575fc;
+  background: #353535;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   padding: 12px 45px;
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
+  margin-top: 60px;
   transition: transform 80ms ease-in;
+  margin-left: 350px;
 }
 
-button:active {
+form button:active {
   transform: scale(0.95);
 }
 
+/* Toggle Circle (remains centered) */
 .toggle-circle {
   position: absolute;
   top: 50%;
@@ -120,6 +166,6 @@ button:active {
 }
 
 .toggle-circle span {
-  font-weight: bold;
+  font-family: 'Carattere', cursive;
   color: #333;
 }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopping Cart Side Panel</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <!-- For demonstration purposes, an "Open Cart" button is included.
+       In your integration, this would be triggered after adding a product to the cart. -->
+  <button id="openCart" class="open-cart-btn">Open Cart</button>
+
+  <!-- Shopping Cart Side Panel -->
+  <div id="cartPanel" class="cart-panel">
+    <div class="cart-header">
+      <h2>Shopping Cart</h2>
+      <button id="closeCart" class="close-cart">&times;</button>
+    </div>
+    <div class="cart-items">
+      <!-- Example Cart Item -->
+      <div class="cart-item">
+        <img src="car.jpg" alt="Car Product" class="cart-item-image">
+        <div class="cart-item-content">
+          <div class="item-info">
+            <h4 class="item-name">Sleek Car</h4>
+            <div class="item-details">
+              <span class="item-volume">80ml</span>
+              <span class="price-label">Price:</span>
+              <span class="item-price">$45,000</span>
+              <button class="quantity-btn">Qty: 1</button>
+            </div>
+          </div>
+          <div class="item-remove">
+            <a href="#" class="remove-link">Remove</a>
+          </div>
+        </div>
+      </div>
+      <!-- You can repeat .cart-item for additional products -->
+      <div class="cart-item">
+        <img src="car.jpg" alt="Car Product" class="cart-item-image">
+        <div class="cart-item-content">
+          <div class="item-info">
+            <h4 class="item-name">Sleek Car</h4>
+            <div class="item-details">
+              <span class="item-volume">80ml</span>
+              <span class="price-label">Price:</span>
+              <span class="item-price">$45,000</span>
+              <button class="quantity-btn">Qty: 1</button>
+            </div>
+          </div>
+          <div class="item-remove">
+            <a href="#" class="remove-link">Remove</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="cart-separator">
+    <div class="cart-summary">
+      <div class="summary-row">
+        <span>Total</span>
+        <span class="summary-price">$90,000</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span class="summary-shipping">To be calculated at checkout</span>
+      </div>
+    </div>
+    <div class="cart-action">
+      <button class="go-to-cart-btn">Go To Shopping Cart</button>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+</body>
+</html>

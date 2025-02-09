@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Information</title>
+  <link rel="stylesheet" href="payment.css" />
+</head>
+<body>
+  <header class="navbar-placeholder"></header>
+  <main class="container">
+    <section class="payment-left">
+      <header>
+        <h2>Payment</h2>
+      </header>
+      <section class="payment-method">
+        <p>
+          <input type="radio" name="payment" id="credit-card" checked>
+          <label for="credit-card">Credit Card</label>
+        </p>
+        <p>
+          <input type="radio" name="payment" id="paypal">
+          <label for="paypal">PayPal</label>
+        </p>
+      </section>
+      <section class="card-details">
+        <div class="card-details-row">
+          <div class="card-column">
+            <input type="text" class="credit-field" placeholder="Card Number">
+            <input type="text" class="credit-field" placeholder="MM/YY">
+          </div>
+          <div class="card-column">
+            <input type="text" class="credit-field" placeholder="CVV">
+            <input type="text" class="credit-field" placeholder="Cardholder Name">
+          </div>
+        </div>
+      </section>
+      <section class="payment-navigation">
+        <button class="continue-btn">Complete Payment</button>
+        <p class="back-link"><a href="shipping.html">Back to Shipping</a></p>
+      </section>
+    </section>
+    <aside class="payment-right">
+      <header>
+        <h2>Your Order</h2>
+        <hr class="summary-line">
+      </header>
+      <section class="order-items">
+        <!-- Order items will be dynamically rendered here -->
+      </section>
+      <section class="order-summary">
+        <p class="subtotal">
+          <span>Subtotal:</span>
+          <span id="subtotalValue"></span>
+        </p>
+        <p class="shipping-cost">
+          <span>Shipping:</span>
+          <span id="shippingCostValue"></span>
+        </p>
+        <hr class="order-divider">
+        <p class="total">
+          <span>Total:</span>
+          <span id="finalTotalValue"></span>
+        </p>
+      </section>
+    </aside>
+  </main>
+  <script src="payment.js"></script>
+</body>
+</html>
