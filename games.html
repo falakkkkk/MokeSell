@@ -2,196 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Website</title>
-  <!-- Carattere font for "Moke Sell" -->
+  <title>Games | Shopping Website</title>
+  <!-- Google Font for "Moke Sell" -->
   <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="games.css">
 </head>
 
 <body>
+  <!-- HEADER / NAVBAR -->
   <header>
     <nav class="navbar">
-      <!-- Left: hamburger + Sell -->
       <div class="navbar-left">
         <div class="hamburger">&#9776;</div>
         <button class="sell-button">Sell</button>
       </div>
-      
-      <!-- Center: "Moke Sell" -->
       <div class="logo">Moke Sell</div>
-      
-      <!-- Right side: custom icon images -->
       <div class="navbar-right icons">
         <span class="wishlist">
-          <img src="images/wishlist.png" alt="Wishlist" class="icon-img" />
+          <img src="images/wishlist.png" alt="Wishlist" class="icon-img">
         </span>
         <span class="cart">
-          <img src="images/cart.png" alt="Cart" class="icon-img" />
+          <img src="images/cart.png" alt="Cart" class="icon-img">
         </span>
         <span class="search">
-          <img src="images/search.png" alt="Search" class="icon-img" />
+          <img src="images/search.png" alt="Search" class="icon-img">
         </span>
         <span class="notification">
-          <img src="images/notification.png" alt="Notification" class="icon-img" />
+          <img src="images/notification.png" alt="Notification" class="icon-img">
         </span>
         <span class="chat">
-          <img src="images/chat.png" alt="Chat" class="icon-img" />
+          <img src="images/chat.png" alt="Chat" class="icon-img">
         </span>
         <span class="profile">
-          <img src="images/profile.png" alt="Profile" class="icon-img" />
+          <img src="images/profile.png" alt="Profile" class="icon-img">
         </span>
       </div>
     </nav>
   </header>
 
-  <!-- Main page container: sidebar + main content -->
+  <!-- PAGE CONTAINER: Sidebar + Main Content -->
   <div class="page-container">
-    <!-- Sidebar -->
+    <!-- SIDEBAR -->
     <div class="sidebar">
       <h2 class="sidebar-heading">User Profile</h2>
       <ul class="nav">
-        <li class="nav-item active" data-tab="user-info">User Info</li>
+        <li class="nav-item" data-tab="user-info">User Info</li>
         <li class="nav-item" data-tab="leaderboard">LeaderBoard</li>
         <li class="nav-item" data-tab="listing">Listing</li>
         <li class="nav-item" data-tab="followers">Followers</li>
         <li class="nav-item" data-tab="reviews">Reviews</li>
         <li class="nav-item" data-tab="coins">Coins</li>
         <li class="nav-item" data-tab="balance">Balance</li>
-        <li class="nav-item" data-tab="game">Game</li>
+        <li class="nav-item active" data-tab="game">Game</li>
       </ul>
       <div class="logout">
-        <a href="#">Logout</a>
-      </div>
-      <div class="vertical-separator">
-        <div class="nav-indicator"></div>
+        <a href="#">Log Out</a>
       </div>
     </div>
 
-    <!-- Main content area (Slot Machine for example) -->
+    <!-- MAIN CONTENT -->
     <div class="main-content">
+      <h1 class="game-title">Games</h1>
+      <hr class="underline">
+      <p class="game-subtitle">Log In Daily to play and win prizes!</p>
+
+      <div class="game-cards">
+        <!-- SLOT MACHINE CARD -->
+        <div class="game-card" id="slot-machine-card">
+          <img src="Images/slot machine.png" alt="Slot Machine">
+          <p>Spin and stand a chance to win 50 coins</p>
+          <button class="play-btn" id="open-slot-machine">Click To Play →</button>
+        </div>
+
+        <!-- GUMBALL MACHINE CARD -->
+        <div class="game-card">
+          <img src="images/gumball.png" alt="Gumball Machine">
+          <p>For <em>Premium</em> Members</p>
+          <p>Be a <strong>Premium</strong> member by reaching the top 10 in the Leader Board</p>
+          <button class="play-btn">Click To Play →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLOT MACHINE MODAL -->
+  <div id="slot-machine-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
       <div class="slot-machine">
-        <!-- Top / Crown -->
         <div class="slot-top">
           <div class="crown">&#9818;</div>
         </div>
-
-        <!-- Reels -->
         <div class="reels">
           <div class="reel" id="reel1">7</div>
           <div class="reel" id="reel2">7</div>
           <div class="reel" id="reel3">7</div>
         </div>
-
-        <!-- Lever -->
         <div class="lever" id="lever">
           <div class="lever-bar" id="leverBar">
             <div class="lever-handle"></div>
           </div>
         </div>
-
-        <!-- Result Message -->
         <div class="result" id="resultMsg"></div>
-
-        <!-- Decorative base -->
-        <div class="slot-base"></div>
       </div>
     </div>
   </div>
 
-  <!-- Script -->
-  <script>
-    // Symbols for the reels
-    const symbols = ["7", "🍒", "🍋", "🍉", "⭐", "🍀", "💎"];
-
-    // Grab DOM elements
-    const reel1 = document.getElementById('reel1');
-    const reel2 = document.getElementById('reel2');
-    const reel3 = document.getElementById('reel3');
-    const lever = document.getElementById('lever');
-    const leverBar = document.getElementById('leverBar');
-    const resultMsg = document.getElementById('resultMsg');
-
-    let interval1, interval2, interval3; // for spinning
-    let spinning = false;                // to prevent re-click mid-spin
-
-    // Utility: get random symbol
-    function getRandomSymbol() {
-      return symbols[Math.floor(Math.random() * symbols.length)];
-    }
-
-    // Start spinning reels (fast intervals)
-    function startSpinning() {
-      interval1 = setInterval(() => {
-        reel1.textContent = getRandomSymbol();
-      }, 80);
-      interval2 = setInterval(() => {
-        reel2.textContent = getRandomSymbol();
-      }, 80);
-      interval3 = setInterval(() => {
-        reel3.textContent = getRandomSymbol();
-      }, 80);
-    }
-
-    // Stop each reel in a staggered fashion
-    function stopSpinning() {
-      setTimeout(() => {
-        clearInterval(interval1);
-        reel1.textContent = getRandomSymbol();
-      }, 1000);
-
-      setTimeout(() => {
-        clearInterval(interval2);
-        reel2.textContent = getRandomSymbol();
-      }, 1500);
-
-      setTimeout(() => {
-        clearInterval(interval3);
-        reel3.textContent = getRandomSymbol();
-
-        // Check the result after the final reel stops
-        checkResult();
-        spinning = false; // allow new pulls
-      }, 2000);
-    }
-
-    // Check if all three reels match
-    function checkResult() {
-      const r1 = reel1.textContent;
-      const r2 = reel2.textContent;
-      const r3 = reel3.textContent;
-      if (r1 === r2 && r2 === r3) {
-        resultMsg.textContent = "Jackpot! You Win!";
-      } else {
-        resultMsg.textContent = "Try Again!";
-      }
-    }
-
-    // Handle lever pull
-    function pullLever() {
-      // Prevent repeated pulls while spinning
-      if (spinning) return;
-      spinning = true;
-
-      // Clear any previous message
-      resultMsg.textContent = "";
-
-      // Trigger the lever pull animation
-      leverBar.classList.remove("pull"); // reset if needed
-      void leverBar.offsetWidth;         // trick to restart CSS animation
-      leverBar.classList.add("pull");
-
-      // Start spinning reels
-      startSpinning();
-      // Stop them with a delay
-      stopSpinning();
-    }
-
-    // Attach event listener to the lever
-    lever.addEventListener("click", pullLever);
-  </script>
-
-  <!-- Your external JS (if needed) -->
+  <!-- JAVASCRIPT -->
   <script src="games.js"></script>
 </body>
 </html>
