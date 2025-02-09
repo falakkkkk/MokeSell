@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard | Moke Sell</title>
+  <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="leader_board.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+          <!-- Left: Hamburger + Sell Button -->
+          <div class="navbar-left">
+            <div class="hamburger">&#9776;</div>
+            <button class="sell-button">Sell</button>
+          </div>
+      
+          <!-- Center: Moke Sell -->
+          <div class="logo">Moke Sell</div>
+      
+          <!-- Right Side: Icons -->
+          <div class="navbar-right icons">
+            <span class="wishlist">
+              <img src="images/wishlist.png" alt="Wishlist" class="icon-img" />
+            </span>
+            <span class="cart">
+              <img src="images/cart.png" alt="Cart" class="icon-img" />
+            </span>
+            <span class="search">
+              <img src="images/search.png" alt="Search" class="icon-img" />
+            </span>
+            <span class="notification">
+              <img src="images/notification.png" alt="Notification" class="icon-img" />
+            </span>
+            <span class="chat">
+              <img src="images/chat.png" alt="Chat" class="icon-img" />
+            </span>
+            <span class="profile">
+              <img src="images/profile.png" alt="Profile" class="icon-img" />
+            </span>
+          </div>
+        </nav>
+      </header>
+      
+  <!-- PAGE CONTAINER -->
+  <div class="page-container">
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2 class="sidebar-heading">User Profile</h2>
+    <ul class="nav">
+      <li class="nav-item active" data-tab="user-info">User Info</li>
+      <li class="nav-item" data-tab="leaderboard">Leaderboard</li>
+      <li class="nav-item" data-tab="listing">Listing</li>
+      <li class="nav-item" data-tab="insights">Insights</li>
+      <li class="nav-item" data-tab="reviews">Reviews</li>
+      <li class="nav-item" data-tab="coins">Coins</li>
+      <li class="nav-item" data-tab="balance">Balance</li>
+      <li class="nav-item" data-tab="game">Game</li>
+    </ul>
+    <div class="logout">
+      <a href="#">Log Out</a>
+    </div>
+    <!-- Indicator that moves on click -->
+    <div class="nav-indicator"></div>
+  </div>
+  
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <h1 class="leaderboard-title">Leader Board</h1>
+      <hr class="title-line">
+
+      <!-- Top 3 Leaders -->
+      <div class="top-leaders">
+        <div class="second-place">
+          <h3>2nd</h3>
+          <div class="profile-pic"></div>
+          <p class="name">Ronald Duck</p>
+          <p class="score">800075</p>
+        </div>
+
+        <div class="first-place">
+          <h3>Winner</h3>
+          <div class="profile-pic winner"></div>
+          <p class="name">You</p>
+          <p class="score">865000</p>
+        </div>
+
+        <div class="third-place">
+          <h3>3rd</h3>
+          <div class="profile-pic"></div>
+          <p class="name">Bob Rob</p>
+          <p class="score">786389</p>
+        </div>
+      </div>
+
+      <!-- Rest of Leaderboard -->
+      <div class="leaderboard-list">
+        <div class="leaderboard-item"><span>4th</span> Tom Doe <span class="icon">🏆</span></div>
+        <div class="leaderboard-item"><span>5th</span> James Smith <span class="icon">🏆</span></div>
+        <div class="leaderboard-item"><span>6th</span> Isabel Lee</div>
+        <div class="leaderboard-item"><span>7th</span> Mark Harper <span class="icon">🏆</span></div>
+        <div class="leaderboard-item"><span>8th</span> Imelda Tan</div>
+        <div class="leaderboard-item"><span>9th</span> Thomas Calloway <span class="icon">🏆</span></div>
+        <div class="leaderboard-item"><span>10th</span> Trent Malory</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

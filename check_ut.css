@@ -1,0 +1,220 @@
+/* =============================
+   RESET / GLOBAL STYLES
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* =============================
+     HEADER / NAVBAR (Using previous prompt's code)
+  ============================== */
+  .navbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .sell-button {
+    background-color: #333;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logo {
+    font-family: 'Carattere', cursive;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .navbar-right .icon-img {
+    width: 24px;
+    height: auto;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .navbar-right .icon-img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* =============================
+     CHECKOUT CONTAINER & STEPS
+  ============================== */
+  .checkout-container {
+    display: flex;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+  }
+  
+  .checkout-steps {
+    width: 20%;
+    margin-right: 2rem;
+  }
+  
+  .checkout-steps ul {
+    list-style: none;
+  }
+  
+  .checkout-steps li {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    color: #aaa;
+  }
+  
+  .checkout-steps li.active {
+    color: #333;
+  }
+  
+  .step-number {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+  }
+  
+  .step-text {
+    font-size: 0.9rem;
+  }
+  
+  /* =============================
+     CHECKOUT FORM
+  ============================== */
+  .checkout-form {
+    width: 80%;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .checkout-form h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #999;
+  }
+  
+  .checkout-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Additional link for "Add another address" */
+  .add-address {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .add-address:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form rows (side by side) */
+  .form-row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .checkbox-group label {
+    margin-left: 0.5rem;
+  }
+  
+  /* =============================
+     BUTTON
+  ============================== */
+  .next-step-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .next-step-btn:hover {
+    background-color: #555;
+  }
+  
+  /* =============================
+     RESPONSIVE (for smaller devices)
+  ============================== */
+  @media (max-width: 768px) {
+    .checkout-container {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    .checkout-steps {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .checkout-form {
+      width: 100%;
+    }
+    .form-row {
+      flex-direction: column;
+    }
+  }
+  
